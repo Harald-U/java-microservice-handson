@@ -1,0 +1,19 @@
+theme: jekyll-theme-minimal
+title: Get your Java Microservice up and running!
+description: Build a Java Microservice and deploy the Microservice to Kubernetes on IBM Cloud
+show_downloads: False
+navigation:
+  - title: Overview
+    url: /
+  - title: 0. Create Kubernetes Cluster
+    url: 0-create-kubernetes-cluster
+  - title: 1. Install Prerequisites
+    url: 1-prereqs    
+  - title: 2. Running the Java Microservice locally
+    url: 2-docker
+  - title: 3. Understanding the Java Implementation
+    url: 3-java
+  - title: 4. Deploying to Kubernetes
+    url: 4-kubernetes
+
+
