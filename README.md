@@ -1,5 +1,5 @@
-# This is 
+# Java Microservices Hand-on
 
-Lorem ipsum ...
+Get your Java Microservice up and running! 
 
-This workshop is published on Github Pages [here](https://harald-u.github.io/istio-handson/).
+This workshop is published on Github Pages [here](https://harald-u.github.io/java-microservice-handson/).
