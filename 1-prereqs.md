@@ -3,7 +3,7 @@ layout: default
 title: Install Prerequisites
 ---
 
-# Lab 1 - Install Prerequisites
+# Lab 2 - Install Prerequisites
 
 ## Required Tools
 
@@ -129,4 +129,4 @@ If you have installed all tools on your local machine Option 3, you have to do t
 
 ---
 
-__Continue with [Lab 2 - Running the Java Microservice locally](./2-docker.md#lab-2---running-the-java-microservice-locally)__ 
+__Continue with [Lab 3 - Running the Java Microservice locally](./2-docker.md#lab-2---running-the-java-microservice-locally)__ 

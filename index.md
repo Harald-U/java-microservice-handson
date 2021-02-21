@@ -21,6 +21,7 @@ There are small variations of microservice definitions out there, here is one de
 
 This workshop has four labs. It should take between 60 and 90 minutues to complete the workshop. The hands-on workshop is made to run as a self service, or at digital event, or at a face to face event.
 
+0. Create a Kubernetes Cluster: [lab](0-create-kubernetes-cluster.md)
 1. Installing prerequisites: [lab](1-prereqs.md)
 2. Running the Java microservice locally: [lab](2-docker.md) 
 3. Understanding the Java implementation: [lab](3-java.md)

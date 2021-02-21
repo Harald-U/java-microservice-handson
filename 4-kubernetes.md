@@ -3,7 +3,7 @@ layout: default
 title: Deploying to Kubernetes
 ---
 
-# Lab 4 - Deploying to Kubernetes
+# Lab 5 - Deploying to Kubernetes
 
 In this lab we will work in the Kubernetes Web Console and with the Kubernetes CLI. 
 

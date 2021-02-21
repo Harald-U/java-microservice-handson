@@ -5,15 +5,15 @@ show_downloads: False
 navigation:
   - title: Overview
     url: /
-  - title: 0. Create Kubernetes Cluster
+  - title: 1. Create Kubernetes Cluster
     url: 0-create-kubernetes-cluster
-  - title: 1. Install Prerequisites
+  - title: 2. Install Prerequisites
     url: 1-prereqs    
-  - title: 2. Running the Java Microservice locally
+  - title: 3. Running the Java Microservice locally
     url: 2-docker
-  - title: 3. Understanding the Java Implementation
+  - title: 4. Understanding the Java Implementation
     url: 3-java
-  - title: 4. Deploying to Kubernetes
+  - title: 5. Deploying to Kubernetes
     url: 4-kubernetes
 
 

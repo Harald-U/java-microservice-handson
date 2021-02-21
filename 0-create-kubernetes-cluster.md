@@ -3,7 +3,7 @@ layout: default
 title: Create Kubernetes Cluster
 ---
 
-# Create a Kubernetes Cluster
+# Lab 1 - Create a Kubernetes Cluster
 
 1. [Register for IBM Cloud](#part-SETUP-00)
 2. [Insert feature code](#part-SETUP-01)

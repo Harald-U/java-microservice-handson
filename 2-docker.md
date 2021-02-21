@@ -3,7 +3,7 @@ layout: default
 title: Running the Java Microservice locally
 ---
 
-# Lab 2 - Running the Java Microservice locally
+# Lab 3 - Running the Java Microservice locally
 
 > _**Note:**_ This lab is structured in **understanding** and **hands-on tasks**. 
 The hands-on tasks are starting from chapter [Hands-on tasks - Run the container **locally**](#lab-hands-on) in that lab.
@@ -111,4 +111,4 @@ http://localhost:3000/openapi/ui/
 
 ---
 
-__Continue with [Lab 3 - Understanding the Java Implementation](./3-java.md#lab-3---understanding-the-java-implementation)__
+__Continue with [Lab 4 - Understanding the Java Implementation](./3-java.md#lab-3---understanding-the-java-implementation)__

@@ -3,7 +3,7 @@ layout: default
 title: Understanding the Java Implementation
 ---
 
-# Lab 3 - Understanding the Java Implementation
+# Lab 4 - Understanding the Java Implementation
 
 > _**Note:**_ This lab is structured in **understanding** and **hands-on tasks**. 
 The hands-on tasks are starting from chapter [Hands-on tasks - Change the code of the authors microservice and run the service in a container **locally**](#lab-hands-on) in that lab.
@@ -363,4 +363,4 @@ $ docker run -i --rm -p 3000:3000 authors
 
 ---
 
-__Continue with [Lab 4 - Deploying to Kubernetes](./4-kubernetes.md)__
+__Continue with [Lab 5 - Deploying to Kubernetes](./4-kubernetes.md)__
