@@ -19,22 +19,18 @@ There are small variations of microservice definitions out there, here is one de
 ---
 ## Labs
 
-This workshop has four labs. It should take between 60 and 90 minutues to complete the workshop. The hands-on workshop is made to run as a self service, or at digital event, or at a face to face event.
+This workshop has five labs. It should take between 60 and 90 minutues to complete the workshop. 
 
-0. Create a Kubernetes Cluster: [lab](0-create-kubernetes-cluster.md)
-1. Installing prerequisites: [lab](1-prereqs.md)
-2. Running the Java microservice locally: [lab](2-docker.md) 
-3. Understanding the Java implementation: [lab](3-java.md)
-4. Deploying to Kubernetes: [lab](4-kubernetes.md)
-
-> Lab 3 and 4 describe how to develop a microservice with Java EE and Eclipse MicroProfile. If you aren't a developer you can skip these two labs.
-
-The last lab shows one way to deploy a microservice to Kubernetes on IBM Cloud.
+0. [Create a Kubernetes Cluster](0-create-kubernetes-cluster.md)
+1. [Installing prerequisites](1-prereqs.md)
+2. [Running the Java microservice locally](2-docker.md) 
+3. [Understanding the Java implementation](3-java.md)
+4. [Deploying to Kubernetes](4-kubernetes.md)
 
 ---
 ## Cloud Native Starter Badge - Level 1
 
 ![Cloud Native Starter Badge - Level 1](images/cnsl1.png)
 
-To be prepared to pass the test of the [**Cloud Native Starter Badge - Level 1**](http://ibm.biz/cloud-native-starter-level-1-badge){:target="_blank"}, you should run the hands-on workshop **virtual** or **face to face**, but you can also run the workshop as a **self service**.
+To be prepared to pass the test of the [Cloud Native Starter Badge - Level 1](http://ibm.biz/cloud-native-starter-level-1-badge){:target="_blank"}, you should run the hands-on workshop **virtual** or **face to face**, but you can also run the workshop as a **self service**.
 

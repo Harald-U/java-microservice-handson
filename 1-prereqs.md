@@ -20,16 +20,16 @@ That Docker image contains all needed CLIs such as:
 So, in order to complete the workshop, you **need** to install [Docker Desktop](https://docs.docker.com/install/) on your local machine. Docker Desktop is available for Mac and Windows and the Docker Engine can be run natively on [Linux](https://docs.docker.com/install/linux).
 
 >You will work in two terminal sessions:
-> * The first terminal session is for the developer focused labs 2 and 3, here you use only your **local** Docker desktop installation.
+> * The first terminal session is for the developer focused labs 3 and 4, here you use only your **local** Docker desktop installation.
 >
-> * The second terminal session is for lab 4 deploy the microservice to Kubernetes, here you will work in our preconfigured Docker image using Tools - Option 1 or 2 below.
+> * The second terminal session is for lab 5 deploy the microservice to Kubernetes, here you will work in our preconfigured Docker image using Tools - Option 1 or 2 below.
 
 ![cns-terminals](images/cns-terminals.gif)
 
-Based on our experience, Option 2 for lab 4 is the best choice for Windows users. For more background, why we provide these different options, see this [article](https://suedbroecker.net/2019/08/27/definition-of-a-dockerfile-to-use-bash-scripts-on-a-windows-10-machine-for-our-cloud-native-starter-workshop/){:target="_blank"}.
+Based on our experience, Option 2 for lab 5 is the best choice for Windows users. For more background, why we provide these different options, see this [article](https://suedbroecker.net/2019/08/27/definition-of-a-dockerfile-to-use-bash-scripts-on-a-windows-10-machine-for-our-cloud-native-starter-workshop/){:target="_blank"}.
 
 
-> Reminder: **The following tools options are only relevant in lab 4 the deployment to Kubernetes on IBM Cloud.** 
+> Reminder: **The following tools options are only relevant in lab 5 the deployment to Kubernetes on IBM Cloud.** 
 
 ---
 
@@ -85,7 +85,7 @@ $ docker run -ti tsuedbroecker/cns-workshop-tools:v5
 
 > _Note:_ If you using Windows you need to clone the project twice. You need to clone the Cloud Native Starter project to your local workstation and you will clone the project in the local running Docker container, which will run in an interactive mode.
 
-The local project is needed for Java development labs 2 and 3, because you can't use Docker in the 'cns-workshop-tools' Docker image. (for more see this [article](https://suedbroecker.net/2019/08/27/definition-of-a-dockerfile-to-use-bash-scripts-on-a-windows-10-machine-for-our-cloud-native-starter-workshop/) ).
+The local project is needed for Java development labs 2 and 3, because you can't use Docker in the 'cns-workshop-tools' Docker image. (for more see this [article](https://suedbroecker.net/2019/08/27/definition-of-a-dockerfile-to-use-bash-scripts-on-a-windows-10-machine-for-our-cloud-native-starter-workshop/){:target="_blank"} ).
 
 #### Step 2: After the container has been started, run these commands inside your running Docker image to get the lastest version of the workshop:
 

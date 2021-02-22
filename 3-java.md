@@ -10,11 +10,11 @@ The hands-on tasks are starting from chapter [Hands-on tasks - Change the code o
 
 ## 1. Usage of Maven for Java
 
-We begin with the [Maven](https://maven.apache.org/) part for our Java project.
+We begin with the [Maven](https://maven.apache.org/){:target="_blank"} part for our Java project.
 
 > Maven Apache Maven is a software project management and comprehension tool. Based on the concept of a **project object model** (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.
 
-In the pom file we define the configuration of our Java project with dependencies, build, and properties including the compiler information as you can see in the [pom file](../authors-java-jee/pom.xml) below.
+In the pom file we define the configuration of our Java project with dependencies, build, and properties including the compiler information as you can see in the [pom file](https://github.com/IBM/cloud-native-starter/blob/master/authors-java-jee/pom.xml){:target="_blank"} below.
 
 ```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -63,8 +63,8 @@ RUN mvn -f /usr/src/app/pom.xml clean package
 
 Our Authors microservice will run on an OpenLiberty Server in a container on Kubernetes.
 
-We need to configure the OpenLiberty server with a [server.xml](../authors-java-jee/liberty/server.xml) file. For our Java implementation we decided to use MicroProfile and within the feature definition in the server.xml we provide this information to our server with the entry `microProfile-3`.
-The server must be reached in the network. Therefore we define the httpEndpoint including httpPort we use for our microservice. For configuration details take a look into the [openliberty documentation](https://openliberty.io/docs/ref/config/).
+We need to configure the OpenLiberty server with a [server.xml](https://github.com/IBM/cloud-native-starter/blob/master/authors-java-jee/liberty/server.xml){:target="_blank"} file. For our Java implementation we decided to use MicroProfile and within the feature definition in the server.xml we provide this information to our server with the entry `microProfile-3`.
+The server must be reached in the network. Therefore we define the httpEndpoint including httpPort we use for our microservice. For configuration details take a look into the [openliberty documentation](https://openliberty.io/docs/ref/config/){:target="_blank"}.
 
 _IMPORTANT:_ We should remember that this port (`httpPort="3000"`) must be exposed in the Dockerfile for our container and mapped inside the Kubernetes deployment configuration.
 
@@ -106,9 +106,9 @@ In the following image you see a list of MicroProfile specifications, we will us
 
 For the Authors service to expose the REST API we need to implement three classes:
 
-* [AuthorsApplication](../authors-java-jee/src/main/java/com/ibm/authors/AuthorsApplication.java) class repesents our web application.
-* [Author](../authors-java-jee/src/main/java/com/ibm/authors/Author.java) class repesents the data structure we use for the Author.
-* [GetAuthor](../authors-java-jee/src/main/java/com/ibm/authors/GetAuthor.java) class repesents the REST API.
+* [AuthorsApplication](https://github.com/IBM/cloud-native-starter/blob/master/authors-java-jee/src/main/java/com/ibm/authors/AuthorsApplication.java){:target="_blank"} class repesents our web application.
+* [Author](https://github.com/IBM/cloud-native-starter/blob/master/authors-java-jee/src/main/java/com/ibm/authors/Author.java){:target="_blank"} class repesents the data structure we use for the Author.
+* [GetAuthor](https://github.com/IBM/cloud-native-starter/blob/master/authors-java-jee/src/main/java/com/ibm/authors/GetAuthor.java){:target="_blank"} class repesents the REST API.
 
 ![class diagramm authors](images/authors-java-classdiagram-01.png)
 
@@ -116,7 +116,7 @@ For the Authors service to expose the REST API we need to implement three classe
 
 #### 3.2.1 **Class AuthorsApplication**
 
-Our web application does not implement any business or other logic, it simply needs to run on a server with no UI. The AuthorsApplication class extends the [javax.ws.rs.core.Application](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_9.0.0/com.ibm.websphere.base.doc/ae/twbs_jaxrs_configjaxrs11method.html) class to do this. 
+Our web application does not implement any business or other logic, it simply needs to run on a server with no UI. The AuthorsApplication class extends the [javax.ws.rs.core.Application](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_9.0.0/com.ibm.websphere.base.doc/ae/twbs_jaxrs_configjaxrs11method.html){:target="_blank"} class to do this. 
 
 The `AuthorsApplication` class provides access to the classes from the `com.ibm.authors` package at runtime.
 The implementation of the interface class _Application_ enables the usage of easy REST implementation provided by MircoProfile. 
@@ -138,7 +138,7 @@ _Note:_ Later we will change the ApplicationPath in this class.
 
 #### 3.2.2 Class Author
 
-This class simply repesents the data structure we use for the [Author](../src/main/java/com/ibm/authors/Author.java). No MircoProfile feature is used here.
+This class simply repesents the data structure we use for the [Author](https://github.com/IBM/cloud-native-starter/blob/master/authors-java-jee/src/main/java/com/ibm/authors/Author.java){:target="_blank"}. No MircoProfile feature is used here.
 
 ```java
 package com.ibm.authors;
@@ -152,7 +152,7 @@ public String blog;
 
 #### 3.2.3 Class GetAuthor
 
-This class implements the REST API response for our Authors microservice. We implement the REST endpoint using the [MicroProfile REST Client](https://github.com/eclipse/microprofile-rest-client/blob/master/README.adoc). We use  `@Path` and `@Get` statements from [JAX-RS](https://jcp.org/en/jsr/detail?id=339) for the REST endpoint and for the [OpenAPI](https://www.openapis.org/) documentation we use `@OpenAPIDefinition` statements. When you add [MicroProfile with OpenAPI](https://github.com/eclipse/microprofile-open-api), OpenAPI always creates automatically an OpenAPI explorer for you.
+This class implements the REST API response for our Authors microservice. We implement the REST endpoint using the [MicroProfile REST Client](https://github.com/eclipse/microprofile-rest-client/blob/master/README.adoc){:target="_blank"}. We use  `@Path` and `@Get` statements from [JAX-RS](https://jcp.org/en/jsr/detail?id=339){:target="_blank"} for the REST endpoint and for the [OpenAPI](https://www.openapis.org/){:target="_blank"} documentation we use `@OpenAPIDefinition` statements. When you add [MicroProfile with OpenAPI](https://github.com/eclipse/microprofile-open-api){:target="_blank"}, OpenAPI always creates automatically an OpenAPI explorer for you.
 
 _REMEMBER:_ In the server.xml configuration we added **MicroProfile** to the Open Liberty server as a feature, as you see in the code below.
 
@@ -165,7 +165,7 @@ _REMEMBER:_ In the server.xml configuration we added **MicroProfile** to the Ope
 
 With the combination of the server.xml and our usage of MicroProfile features in the GetAuthor class we will be able to access an OpenAPI explorer with this URL `http://host:http_port/openapi` later.
 
-This is the source code of the [GetAuthors class](../src/main/java/com/ibm/authors/GetAuthor.java) with the mentioned MicroProfile features:
+This is the source code of the [GetAuthors class](https://github.com/IBM/cloud-native-starter/blob/master/authors-java-jee/src/main/java/com/ibm/authors/GetAuthor.java){:target="_blank"} with the mentioned MicroProfile features:
 
 ```java
 @ApplicationScoped
@@ -227,13 +227,13 @@ We have added the class HealthEndpoint to the Authors package as you see in the 
 
 ![class diagramm HealthEndpoint](images/authors-java-classdiagram-02.png)
 
-We want to support this [Kubernetes function](https://github.com/OpenLiberty/guide-kubernetes-microprofile-health#checking-the-health-of-microservices-on-kubernetes):
+We want to support this [Kubernetes function](https://github.com/OpenLiberty/guide-kubernetes-microprofile-health#checking-the-health-of-microservices-on-kubernetes){:target="_blank"}:
 
 > Kubernetes provides liveness and readiness probes that are used to check the health of your containers. These probes can check certain files in your containers, check a TCP socket, or make HTTP requests. MicroProfile Health exposes readiness and liveness endpoints on your microservices. Kubernetes polls these endpoints as specified by the probes to react appropriately to any change in the microservice’s status.
 
-For more information check the [Kubernetes Microprofile Health documentation](https://openliberty.io/guides/kubernetes-microprofile-health.html) and the documentation on [GitHub](https://github.com/eclipse/microprofile-health).
+For more information check the [Kubernetes Microprofile Health documentation](https://openliberty.io/guides/kubernetes-microprofile-health.html){:target="_blank"} and the documentation on [GitHub](https://github.com/eclipse/microprofile-health){:target="_blank"}.
 
-This is the implementation of the Health Check for Kubernetes in the [HealthEndpoint class](../authors-java-jee/src/main/java/com/ibm/authors/HealthEndpoint.java) of the Authors service:
+This is the implementation of the Health Check for Kubernetes in the [HealthEndpoint class](https://github.com/IBM/cloud-native-starter/blob/master/authors-java-jee/src/main/java/com/ibm/authors/HealthEndpoint.java){:target="_blank"} of the Authors service:
 
 ```java
 @Readiness
@@ -272,7 +272,7 @@ $ docker build -t authors .
 $ docker run -i --rm -p 3000:3000 authors
 ```
 
-#### Step 2: Change the contextRoot in [server.xml](../authors-java-jee/liberty/server.xml) to something similar like "myapi".
+#### Step 2: Change the contextRoot in [server.xml](https://github.com/IBM/cloud-native-starter/blob/master/authors-java-jee/liberty/server.xml){:target="_blank"} to something similar like "myapi".
 
 Open the file ```cloud-native-starter/authors-java-jee/liberty/server.xml``` in a editor and change the value.
 
@@ -291,7 +291,7 @@ Open the file ```cloud-native-starter/authors-java-jee/liberty/server.xml``` in 
 </server>
 ```
 
-### Step 3: Change the @ApplicationPath in the class [AuthorsApplication.java](../authors-java-jee/src/main/java/com/ibm/authors/AuthorsApplication.java) something similar like "myv1".
+### Step 3: Change the @ApplicationPath in the class [AuthorsApplication.java](https://github.com/IBM/cloud-native-starter/blob/master/authors-java-jee/src/main/java/com/ibm/authors/AuthorsApplication.java){:target="_blank"} something similar like "myv1".
 
 Open the file ```cloud-native-starter/authors-java-jee/src/main/java/com/ibm/authors/AuthorsApplication.java``` in a editor and change the value.
 
@@ -306,7 +306,7 @@ public class AuthorsApplication extends Application {
 }
 ```
 
-#### Step 4: In the class [GetAuthor.java](../authors-java-jee/src/main/java/com/ibm/authors/GetAuthor.java) change the returned author name to something similar like "MY NAME".
+#### Step 4: In the class [GetAuthor.java](https://github.com/IBM/cloud-native-starter/blob/master/authors-java-jee/src/main/java/com/ibm/authors/GetAuthor.java){:target="_blank"} change the returned author name to something similar like "MY NAME".
 
 Open the file ```cloud-native-starter/authors-java-jee/src/main/java/com/ibm/authors/GetAuthor.java``` in a editor and change the value.
 
@@ -327,7 +327,7 @@ public Response getAuthor(@Parameter(
 	}
 ```
 
-#### Step 5: In the class [HealthEndpoint.java](../authors-java-jee/src/main/java/com/ibm/authors/HealthEndpoint.java) change the returned information to something similar like "ok for the workshop".
+#### Step 5: In the class [HealthEndpoint.java](https://github.com/IBM/cloud-native-starter/blob/master/authors-java-jee/src/main/java/com/ibm/authors/HealthEndpoint.java){:target="_blank"} change the returned information to something similar like "ok for the workshop".
 
 ```java
 @Health

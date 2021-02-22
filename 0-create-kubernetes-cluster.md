@@ -12,15 +12,15 @@ title: Create Kubernetes Cluster
 
 # 1. Register for IBM Cloud <a name="part-SETUP-00"></a>
 
-#### Step 1: Open a browser window and navigate to the IBM Cloud [Registration page](https://ibm.biz/Bd2JHx).
+#### Step 1: Open a browser window and navigate to the IBM Cloud [Registration page](https://cloud.ibm.com/registration){:target="_blank"}.
 
 ![image](images/registration.png)
 
-#### Step 2: Fill in the registration form and follow the link in the **confirmation email** to confirm your account once it arrives.
+#### Step 2: Follow the instructions to confirm your account.
 
-![Validation email](images/email.png)
+You will receive an email with a confirmation code.
 
-#### Step 3: [Login into IBM Cloud](https://ibm.biz/Bd2JHx) using your account credentials.
+#### Step 3: [Login into IBM Cloud](https://cloud.ibm.com){:target="_blank"} using your account credentials.
 
 _Note:_ By default, all new IBM Cloud accounts are set to a [lite version](https://www.ibm.com/cloud/pricing).
 
@@ -32,7 +32,7 @@ In order to create a free Kubernetes cluster, you need a **feature code**.
 # 2 Insert feature code <a name="part-SETUP-01"></a>
 
 In order to execute the workshop easily, we provide **feature codes** to create free Kubernetes clusters, so no credit card details are required.
-To apply the feature code to your [Cloud Account](https://cloud.ibm.com/account), navigate to your "`Account settings`" and then to ("`Manage`" -> "`Account`").
+To apply the feature code to your [Cloud Account](https://cloud.ibm.com/account){:target="_blank"}, navigate to your "`Account settings`" and then to ("`Manage`" -> "`Account`").
 Enter your unique Feature (Promo) Code to upgrade your lite account.
 
 _Note:_ Free clusters expire after one month (30 days).
@@ -67,8 +67,6 @@ Ensure you set following values in the creation dialog:
 #### Step 7: Now you will be forwarded to your cluster on IBM Cloud and you can verify the status of the creation of your cluster
 
 The creation of the cluster takes up to 20 min.
-
-![create Kubernetes service](images/ibmcloud-create-kubernetes-3.png)
 
 ---
 
