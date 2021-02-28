@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Deploying to Kubernetes
+title: 5. Deploying to Kubernetes
 ---
 
 # Lab 5 - Deploying to Kubernetes

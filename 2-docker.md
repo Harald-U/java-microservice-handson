@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Running the Java Microservice locally
+title: 3. Running the Java Microservice locally
 ---
 
 # Lab 3 - Running the Java Microservice locally

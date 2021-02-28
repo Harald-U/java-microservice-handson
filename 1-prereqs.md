@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Install Prerequisites
+title: 2. Install Prerequisites
 ---
 
 # Lab 2 - Install Prerequisites

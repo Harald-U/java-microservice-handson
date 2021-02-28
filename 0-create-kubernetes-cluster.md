@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Create Kubernetes Cluster
+title: 1. Create Kubernetes Cluster
 ---
 
 # Lab 1 - Create a Kubernetes Cluster

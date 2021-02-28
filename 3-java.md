@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Understanding the Java Implementation
+title: 4. Understanding the Java Implementation
 ---
 
 # Lab 4 - Understanding the Java Implementation
